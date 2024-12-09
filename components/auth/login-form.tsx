@@ -49,7 +49,7 @@ export default function LoginForm() {
     <Card className="w-full max-w-md">
       <CardHeader className="flex items-center justify-center pb-2">
         <Image
-          src="/vale-logo.png"
+          src="/logo-vale.png"
           alt="Vale Logo"
           width={150}
           height={60}

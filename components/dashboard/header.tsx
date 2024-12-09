@@ -20,7 +20,7 @@ export function Header() {
             <Menu className="h-6 w-6" />
           </Button>
           <Image
-            src="/vale-logo.png"
+            src="/logo-vale.png"
             alt="Vale Logo"
             width={100}
             height={40}
