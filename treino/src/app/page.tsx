@@ -61,20 +61,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                         onClick={() => router.push("/Financeiro")}
                     />
                 </div>
-            </div>
-            <div>
-                <h2>CPF:</h2>
-                <input
-                    type="text"
-                    value={cpf}
-                    onChange={handleChange}
-                    placeholder="Digite seu CPF"
-                    className={`border p-2 rounded-md ${
-                        isValid ? "border-green-500" : "border-red-500"
-                    }`}
-                />
-                {!isValid && <p className="text-red-500">CPF inválido</p>}
-            </div>
+            </div>  
         </main>
     );
 }
