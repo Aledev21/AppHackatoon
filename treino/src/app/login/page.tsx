@@ -2,12 +2,9 @@
 import { useState } from 'react';
 import type { AppProps } from 'next/app';
 
-// Função para aplicar a máscara no CPF
 const aplicarMascaraCPF = (cpf: string) => {
-  // Remove tudo que não for número
   const apenasNumeros = cpf.replace(/\D/g, '');
   
-  // Adiciona a máscara de CPF: XXX.XXX.XXX-XX
   return apenasNumeros.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
 };
 
@@ -18,10 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    const cpfFormatado = aplicarMascaraCPF(value);  // Aplica a máscara no CPF
+    const cpfFormatado = aplicarMascaraCPF(value);  
     setCpf(cpfFormatado);
 
-    // Verifica se o CPF tem 11 dígitos
     const apenasNumeros = cpfFormatado.replace(/\D/g, "");
     if (apenasNumeros.length === 11) {
       setIsValid(true);
@@ -58,7 +54,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             onChange={handleChange}
             placeholder="Digite seu CPF"
             className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm"
-            maxLength={14}  // Limita o número de caracteres para o CPF formatado
+            maxLength={14} 
           />
           {!isValid && (
             <p className="text-red-500 text-sm">O CPF deve conter 11 dígitos numéricos.</p>
