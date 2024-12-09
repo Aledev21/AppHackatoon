@@ -1,23 +1,25 @@
 "use client";
 
-import Link, { LinkProps } from "next/link"
-
 interface BenefitItemProps {
-    icon: string
-    name: string
-    url: string
-    color: string
+    icon: string;
+    name: string;
+    color: string;
+    onClick?: () => void;
 }
 
-export default function BenefitItem (props: BenefitItemProps) {
+export default function BenefitItem(props: BenefitItemProps) {
     return (
-        <Link style={{backgroundColor: props.color}} className="bg-red-400 p-2 rounded-md " href={props.url}>
+        <div
+            style={{ backgroundColor: props.color }}
+            className="p-2 rounded-md cursor-pointer"
+            onClick={props.onClick} 
+        >
             <div className="benefit-item flex flex-col gap-2">
                 <span className="icon w-8">
-                    <img src={props.icon} />
+                    <img src={props.icon} alt={`${props.name} Icon`} />
                 </span>
                 <h2>{props.name}</h2>
             </div>
-        </Link>
-    )
+        </div>
+    );
 }
