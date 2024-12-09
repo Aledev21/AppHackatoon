@@ -17,10 +17,4 @@ export const newsData = [
     date: '2024-03-15',
     excerpt: 'Vale apresenta crescimento significativo no primeiro trimestre de 2024.',
   },
-  {
-    id: '4',
-    title: 'Edit',
-    date: '2022-04-11',
-    excerpt: 'Vale apresenta crescimento significativo no primeiro trimestre de 2024.',
-  },
 ];

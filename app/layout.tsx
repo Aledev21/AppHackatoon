@@ -1,5 +1,5 @@
 import './globals.css';
-import type { Metadata, Viewport } from 'next';
+import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Toaster } from '@/components/ui/toaster';
 
@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 };
 
-export const viewport: Viewport = {
+// Remova o tipo Viewport e use um simples objeto
+export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
