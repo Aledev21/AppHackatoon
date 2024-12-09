@@ -14,8 +14,11 @@ export function BenefitsCarousel() {
     <div className="w-full overflow-hidden" ref={emblaRef}>
       <div className="flex -ml-1">
         {benefitsData.map((benefit) => (
-          <div key={benefit.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
+          <div
+            key={benefit.id}
+            className="pl-1 md:basis-1/2 lg:basis-1/3 flex justify-center"
+          >
+            <div className="w-[300px] h-[250px]"> {/* Definir tamanho padrão aqui */}
               <BenefitCard {...benefit} />
             </div>
           </div>
