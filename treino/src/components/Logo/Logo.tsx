@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 const Header: React.FC = () => {
   return (
-    <header className="relative flex items-center h-16 px-4 bg-gray-100">
-      <div className="absolute top-2 right-4">
+    <header className="flex items-start p-2">
+      <div className="flex">
         <Image
           src="/logo.png"
           alt="Logo"
