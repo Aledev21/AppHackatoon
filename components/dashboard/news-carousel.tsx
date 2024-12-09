@@ -9,25 +9,19 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { newsData } from "@/lib/news-data";
-import Autoplay from 'embla-carousel-autoplay';
-import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay'; // Autoplay plugin
 
 export function NewsCarousel() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 5000, stopOnInteraction: true })
-  ]);
-
   return (
     <div className="space-y-4">
       <h2 className="text-2xl font-bold">Últimas Notícias</h2>
+      {/* O componente <Carousel> já configura o loop e o autoplay */}
       <Carousel
         opts={{ align: 'start', loop: true }}
-        plugins={[
-          Autoplay({ delay: 5000, stopOnInteraction: true })
-        ]}
+        plugins={[Autoplay({ delay: 5000, stopOnInteraction: true })]}
         className="w-full"
       >
-        <CarouselContent className="-ml-1" ref={emblaRef}>
+        <CarouselContent className="-ml-1">
           {newsData.map((news) => (
             <CarouselItem key={news.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
