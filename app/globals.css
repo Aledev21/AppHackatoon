@@ -76,8 +76,29 @@
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box; /* Garante que o padding e border não afetem a largura dos elementos */
   }
+  
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden; /* Evita rolagem lateral */
+    max-width: 100%; /* Garante que o corpo da página não ultrapasse a tela */
+  }
+
+  html, body {
+    width: 100%;
+    overflow-x: hidden; /* Desabilita rolagem lateral */
+  }
+
+  /* Garantir que as imagens e vídeos não ultrapassem a largura da tela */
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Caso haja containers com largura fixa, evitar que eles ultrapassem a tela */
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }

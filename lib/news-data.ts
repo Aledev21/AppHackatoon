@@ -17,4 +17,22 @@ export const newsData = [
     date: '2024-03-15',
     excerpt: 'Vale apresenta crescimento significativo no primeiro trimestre de 2024.',
   },
+  {
+    id: '4',
+    title: 'Dia Internacional Contra a Corrupção',
+    date: '2024-12-09',
+    excerpt: 'Agir com Integridade é um dos valores da Vale.',
+  },
+  {
+    id: '5',
+    title: 'Reserva Natural Vale divulga programação para dezembro',
+    date: '2024-12-09',
+    excerpt: 'Confira a programação oferecida ao longo do mês de novembro.',
+  },
+  {
+    id: '6',
+    title: 'Barragem Norte Laranjeiras passará por obras de melhoria',
+    date: '2024-12-04',
+    excerpt: 'Atividades serão iniciadas em dezembro e estão previstas para terminarem em 2026.',
+  },
 ];
