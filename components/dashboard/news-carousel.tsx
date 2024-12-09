@@ -25,15 +25,17 @@ export function NewsCarousel() {
           {newsData.map((news) => (
             <CarouselItem key={news.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
-                <Card className="h-full hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <CardTitle className="text-lg">{news.title}</CardTitle>
-                    <p className="text-sm text-muted-foreground">{news.date}</p>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600">{news.excerpt}</p>
-                  </CardContent>
-                </Card>
+                <div className="w-[300px] h-[250px]">
+                  <Card className="h-full hover:shadow-lg transition-shadow">
+                    <CardHeader>
+                      <CardTitle className="text-lg">{news.title}</CardTitle>
+                      <p className="text-sm text-muted-foreground">{news.date}</p>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600">{news.excerpt}</p>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             </CarouselItem>
           ))}
